@@ -32,9 +32,8 @@ export default function register(hub) {
     const g = hub.el("span", "glyph"), ic = hub.el("span", "icon ext-icon");
     ic.style.setProperty("--src", `url("${hub.url("icon.svg")}")`); g.append(ic);
     const txt = hub.el("span", "txt");
-    const names = items.map((i) => i.querySelector(".nm")?.textContent).filter(Boolean);
-    txt.append(hub.el("span", "nm", "Разделы"), hub.el("span", "lb", names.join(", ")));
-    const chev = hub.el("span", "chev", "▸");
+    txt.append(hub.el("span", "nm", "Разделы"));
+    const chev = hub.el("span", "chev", "▾");
     b.replaceChildren(g, txt, chev);
     b.setAttribute("aria-expanded", String(!f));
     b.title = f ? "Показать пункты" : "Свернуть пункты";

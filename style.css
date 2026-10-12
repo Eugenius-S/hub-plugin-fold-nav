@@ -1,4 +1,6 @@
 #nav-extra.nav-folded > .srow.nav:not([aria-current="true"]) { display: none; }
+#nav-extra:has(.nav-fold) { display: flex; flex-direction: column; }
+#nav-extra > .slot-sidebar-nav:has(.nav-fold) { order: -1; }
 .slot-sidebar-nav .nav-fold { margin: 0 var(--space-2) var(--space-2); width: calc(100% - 2 * var(--space-2)); }
 .nav-fold .chev { margin-left: auto; align-self: center; transition: transform .15s; color: var(--muted-foreground); }
-.nav-fold[aria-expanded="true"] .chev { transform: rotate(90deg); }
+.nav-fold[aria-expanded="true"] .chev { transform: rotate(180deg); }
